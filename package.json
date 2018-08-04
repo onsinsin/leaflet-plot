@@ -1,0 +1,42 @@
+{
+  "name": "leaflet-plot",
+  "version": "1.0.0",
+  "description": "plot for leaflet",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start build/karma.conf.js",
+    "dev": "",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onsinsin/leaflet-plot.git"
+  },
+  "keywords": [
+    "plot"
+  ],
+  "author": "onsinsin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onsinsin/leaflet-plot/issues"
+  },
+  "homepage": "https://github.com/onsinsin/leaflet-plot#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "copy-webpack-plugin": "^4.5.2",
+    "karma": "^2.0.5",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-webpack": "^3.0.0",
+    "mocha": "^5.2.0",
+    "mockjs": "^1.0.1-beta3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.4"
+  }
+}
