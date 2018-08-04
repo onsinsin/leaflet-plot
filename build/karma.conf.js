@@ -5,7 +5,8 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: './',
+    // relative to folder of this file
+    basePath: '../',
 
 
     // frameworks to use
@@ -38,7 +39,8 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['mocha','coverage'],
+    reporters: ['mocha'],
+    // reporters: ['mocha','coverage'],
     // reporter options
     mochaReporter: {
       colors: {
@@ -86,7 +88,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
