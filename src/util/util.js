@@ -2,7 +2,7 @@
  *
  * @type {{}}
  */
-import lodash from 'lodash'
+import _ from 'lodash'
 export default {
   /**
    * 随机数 32位
@@ -51,7 +51,7 @@ export default {
    * @param obj
    */
   cloneDeep(obj){
-    return lodash.cloneDeep(obj);
+    return _.cloneDeep(obj);
   },
   /**
    * 判断a,b是否相等
@@ -69,6 +69,6 @@ export default {
    * @param c
    */
   merge(a,b,c){
-    return lodash.merge.call(a,b,c);
+    return _.merge.call(a,b,c);
   }
 }

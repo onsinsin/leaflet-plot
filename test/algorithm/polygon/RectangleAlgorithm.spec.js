@@ -59,4 +59,35 @@ describe('RectangleAlgorithm',function(){
       done();
     })
   })
+  describe('#build',function(){
+    it('should throw error when controlpoint illegal',function(done){
+      expect(function(){
+        instance.build();
+      }).to.throw();
+      done();
+    })
+
+    it('should throw return array of geojson',function(done){
+      expect(function(){
+        instance.addControlPoint([
+          {
+            x:0,
+            y:1
+          },{
+            x:1,
+            y:0
+          },{
+            x:3,
+            y:2
+          }
+        ]);
+      }).to.not.throw();
+      let geometryies=instance.build();
+      expect(geometryies).not.to.equal(null);
+      expect(geometryies.length).to.equal(1);
+      expect(geometryies[0].type).to.equal('Polygon');
+      expect(geometryies[0].coordinates.length).to.equal(4);
+      done();
+    })
+  })
 });

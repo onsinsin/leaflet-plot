@@ -36,6 +36,18 @@ export default class RectangleAlgorithm extends BaseAlgorithm {
   build() {
     this.validateControlPoints();
     //
+    let coordinates=[];
+    for(let i=0,len=this.controlPoints.length;i<len;i++){
+      let controlPoint=this.controlPoints[i];
+      coordinates.push([controlPoint.x,controlPoint.y]);
+    }
+    let lastPt=this._caculateLastPt();
+    coordinates.push([lastPt.x,lastPt.y]);
+    let geometry= {
+      type:'Polygon',
+      coordinates:coordinates
+    }
+    return [geometry];
   }
 
   /**
